@@ -2,3 +2,7 @@
 .idea
 db.sqlite3
 personal_portfolio_ondj/__pycache__/
+blog/__pycache__
+blog/migrations
+portfolio/__pycache__
+portfolio/migrations

@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 
-def blog():
+def blog(request):
     return render(request, 'blog/blog.html')

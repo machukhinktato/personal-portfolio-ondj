@@ -1,5 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Blog
 
 
-def blog(request):
-    return render(request, 'blog/blog.html')
+def all_blogs(request):
+    blogs = Blog.objects.order_by('-date')
+    return render(request, 'blog/all_blogs.html')
+
+
+def detail(request, pk):
+    blog = get_object_or_404(Blog, pk=pk)
+    return render(request, 'blog/details.html')

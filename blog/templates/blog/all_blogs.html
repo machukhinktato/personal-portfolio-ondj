@@ -5,6 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-
+    <h1>HELLO</h1>
+    {% for blog in blogs %}
+        <br>
+        <h2><a href="{% url 'details' blog.id%}">{{ blog.title }}</a></h2>
+        <b>{{ blog.date }}</b>
+        <p>{{ blog.description|truncate }}</p>
+    {% endfor %}
+    
 </body>
 </html>

@@ -10,3 +10,7 @@ def all_blogs(request):
 def detail(request, pk):
     blog = get_object_or_404(Blog, pk=pk)
     return render(request, 'blog/details.html')
+
+
+
+# https://github.com/zappycode/django3-personal-portfolio/blob/master/blog/views.py

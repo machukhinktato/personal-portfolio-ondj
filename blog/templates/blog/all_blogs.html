@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container col-4 mt-5">
     <h1>Blogs: {{ blogs.count }}</h1>
     {% for blog in blogs %}
         <br>
-        <h2><a href="{% url 'details' blog.id%}">{{ blog.title }}</a></h2>
+        <h2><a href="{% url 'details' blog.id %}">{{ blog.title }}</a></h2>
         <b>{{ blog.date }}</b>
         <p>{{ blog.description|truncatechars:50 }}</p>
     {% endfor %}
-    
-</body>
-</html>
+</div>
+{% endblock %}

@@ -6,3 +6,5 @@ blog/__pycache__
 blog/migrations
 portfolio/__pycache__
 portfolio/migrations
+static/
+templates/

@@ -12,8 +12,10 @@
         <div class="row">
             {% for project in projects %}
                 <div class="col-lg-4 col-md-6">
+                    <a href="{% url 'project_details' pk=project.id %}">
                     <h3>{{ project.title }}</h3>
-                    {% if project.url %}
+                    </a>
+                        {% if project.url %}
                         <a href="{{ project.url }}">
                             <img src="{{ project.image.url }}" height=200>
                         </a>

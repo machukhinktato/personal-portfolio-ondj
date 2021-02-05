@@ -1,5 +1,5 @@
-{#{% extends 'base.html' %}#}
-{#{% load static %}#}
+{% extends 'base.html' %}
+{% load static %}
 
 <!doctype html>
 <html lang="en">
@@ -9,7 +9,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% block title %}
-        <title>{{  }}</title>
+        <title>{{ block.super }}</title>
     {% endblock %}
 
 </head>

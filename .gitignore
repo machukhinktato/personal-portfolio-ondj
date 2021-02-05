@@ -8,3 +8,6 @@ portfolio/__pycache__
 portfolio/migrations
 static/
 media/
+*/__pycache__
+__pycache__
+/personal_portfolio_ondj/local_settings.py

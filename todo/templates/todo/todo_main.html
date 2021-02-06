@@ -29,7 +29,7 @@
             {% endif %}
         </div>
         <div class="btn btn-outline-light">
-            <a href="#" style="text-decoration: none" class="text-success">do you want to create a task?</a>
+            <a href="{% url 'todo_create_url' %}" style="text-decoration: none" class="text-success">do you want to create a task?</a>
         </div>
     </div>
 {% endblock %}

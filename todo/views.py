@@ -8,6 +8,6 @@ def todo_main(request):
     return render(request, 'todo/todo_main.html', {'todo_list': todo_list})
 
 
-def todo_form_creation(request):
+def todo_create(request):
     if request.method == 'GET':
-        return render(request, 'todo/create.html', form=ToDoForm)
+        return render(request, 'todo/todo_create.html', {'form': ToDoForm})

@@ -9,15 +9,29 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% block title %}
-        <title>{{ block.super }}</title>
+        <title>ToDo {{ block.super }}</title>
     {% endblock %}
 
 </head>
 <body>
 {% block content %}
-<div class="container col-5">
-    <H1>hello mata facking world</H1>
-</div>
+    <div class="container">
+        <div>
+            <H1 class="container col-5">hello mata facking world</H1>
+        </div>
+        <div>
+            {% if todo_list.count %}
+                {% for todo in todo_list %}
+                    {{ todo.title }}
+                {% endfor %}
+            {% else %}
+                <p>there is no any tasks in todo list</p>
+            {% endif %}
+        </div>
+        <div class="btn btn-outline-light">
+            <a href="#" style="text-decoration: none" class="text-success">do you want to create a task?</a>
+        </div>
+    </div>
 {% endblock %}
 </body>
 </html>

@@ -23,6 +23,9 @@ urlpatterns = [
     path('', include('portfolio.urls')),
     path('blog/', include('blog.urls')),
     path('todo/', include('todo.urls')),
+    path('signup/', include('authapp.urls')),
+    path('login/', include('authapp.urls')),
+    path('logout/', include('authapp.urls')),
 
 ]
 

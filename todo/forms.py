@@ -20,6 +20,4 @@ class ToDoForm(ModelForm):
             if new_title == 'create':
                 from django.core.exceptions import ValidationError
                 raise ValidationError('title may not be "Create"')
-            return new_slug
-
-    # def  clean_
+            return new_title

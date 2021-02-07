@@ -5,7 +5,9 @@ personal_portfolio_ondj/__pycache__/
 blog/__pycache__
 blog/migrations
 portfolio/__pycache__
+authapp/__pycache__
 portfolio/migrations
+authapp/migrations
 static/
 media/
 */__pycache__

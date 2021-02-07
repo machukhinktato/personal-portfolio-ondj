@@ -10,7 +10,8 @@
     <form action="{% url 'todo_create_url' %}" method="post">
         {% csrf_token %}
         {% for field in form %}
-            <div class="form-group">
+{#            <div class="container">#}
+            <div class="container form-group mt-5">
                 {% if field.errors %}
                     <div class="alert alert-danger">
                         {{ field.errors }}
@@ -20,6 +21,8 @@
                 {{ field }}
             </div>
         {% endfor %}
-        <button type="submit" class="btn btn-secondary">Create Post</button>
+    <div class="container">
+        <button type="submit" class="btn btn-secondary mt-5">Create Post</button>
+    </div>
     </form>
 {% endblock %}

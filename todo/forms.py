@@ -17,7 +17,7 @@ class ToDoForm(ModelForm):
         def clean_title(self):
             new_title = self.cleaned_data['title'].lower()
 
-            if new_title == 'create':
-                from django.core.exceptions import ValidationError
-                raise ValidationError('title may not be "Create"')
+            # if new_title == 'create':
+            #     from django.core.exceptions import ValidationError
+            #     raise ValidationError('title may not be "Create"')
             return new_title

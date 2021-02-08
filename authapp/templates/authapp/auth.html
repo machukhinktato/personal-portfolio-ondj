@@ -2,14 +2,31 @@
 {% load static %}
 
 {% block content %}
-    <h1>this is autharization page</h1>
+    <h1 class="text-center mt-5">this is autharization page</h1>
 
-    {% for field in fields %}
 
-        <div class="container col-6 mt-5">
-            <p>{{ field.label }}</p>
-            <p>{{ field }}</p>
+    <form action="{% url 'authapp:auth_main_url' %}">
+        {% csrf_token %}
+        {% for field in fields %}
+
+            {% if field.errors %}
+                <div class="alert alert-danger">
+                    {{ field.errors }}
+                </div>
+            {% endif %}
+
+            <div class="container col-4 mt-5">
+                <p>{{ field.label }}</p>
+                <p>{{ field }}</p>
+
+            </div>
+        {% endfor %}
+        <div class="container col-4 mt-5">
+            <button type="submit" class="btn btn-outline-success">Log in</button>
+            <a href="#" style="text-decoration: none;" class="btn btn-outline-success">
+                Sign up
+            </a>
         </div>
+    </form>
 
-    {% endfor %}
 {% endblock %}

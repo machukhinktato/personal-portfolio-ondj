@@ -1,13 +1,19 @@
-from  django import forms
+from django import forms
 from .models import UserProfile
 
 
 class UserProfileLoginForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ['first_name', 'last_name']
+        fields = ['username', 'password']
 
         widgets = {
-            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'last_name': forms.TextInput(attrs={'class': 'form-control'})
+            'username': forms.TextInput(attrs={'class': 'form-control'}),
+            'password': forms.TextInput(attrs={'class': 'form-control'})
         }
+
+
+class UserProfileRegisterForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = '__all__'

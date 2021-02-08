@@ -3,4 +3,13 @@
 
 {% block content %}
     <h1>this is autharization page</h1>
+
+    {% for field in fields %}
+
+        <div class="container col-6 mt-5">
+            <p>{{ field.label }}</p>
+            <p>{{ field }}</p>
+        </div>
+
+    {% endfor %}
 {% endblock %}

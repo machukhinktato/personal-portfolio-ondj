@@ -11,6 +11,8 @@ class UserProfileLoginForm(forms.ModelForm):
         widgets = {
             'username': forms.TextInput(attrs={'class': 'form-control'}),
             'password': forms.PasswordInput(attrs={'class': 'form-control'})
+            # 'password': forms.PasswordInput(
+            #     attrs={'placeholder': '********', 'autocomplete': 'off', 'data-toggle': 'password'}),
         }
 
 

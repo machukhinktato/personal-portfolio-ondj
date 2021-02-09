@@ -22,15 +22,16 @@
             </div>
         {% endfor %}
         <div class="container d-flex flex-column col-4">
-            <a href="#" style="text-decoration: none;" class=" btn btn-outline-success"
-               type="submit">
-                Log in
-            </a>
+            {#            <a href="#" style="text-decoration: none;" class=" btn btn-outline-success"#}
+{#            <button type="submit" class="btn btn-outline-success">#}
+                <input class="form-control btn btn-outline-success" type="submit" value="Log in">
+{#                Log in#}
+{#            </button>#}
+            {#            </a>#}
             <br>
             <a href="{% url 'authapp:reg_url' %}" style="text-decoration: none;" class="btn btn-outline-success">
                 Registration
             </a>
-            <br>
             <a href="#" style="text-decoration: none;" class="btn btn-outline-success">
                 Back
             </a>

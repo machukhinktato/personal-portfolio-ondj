@@ -15,62 +15,65 @@
 
 </head>
 <body>
+{% block navbar %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'img/t_rune_with_bg_wh.png' %}" height=50 alt="">
-        </a>
-        <a class="navbar-brand" href="{% url 'index' %}"> <b class="ms-3">netkillah</b></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" style="color: green;">About me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'index' %}" style="color: green;">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'all_blogs' %}" style="color: green;">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'todo_url' %}" style="color: green;">To Do list</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% static 'resume.pdf' %}" target="_blank" style="color: green;">Resume</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="{% url 'authapp:auth_main_url' %}" style="color: green;">Auth</a>
-                </li>
-                {#                <li class="nav-item dropdown">#}
-                {#                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"#}
-                {#                       data-bs-toggle="dropdown" aria-expanded="false">#}
-                {#                        Dropdown#}
-                {#                    </a>#}
-                {#                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">#}
-                {#                        <li><a class="dropdown-item" href="#">Action</a></li>#}
-                {#                        <li><a class="dropdown-item" href="#">Another action</a></li>#}
-                {#                        <li>#}
-                {#                            <hr class="dropdown-divider">#}
-                {#                        </li>#}
-                {#                        <li><a class="dropdown-item" href="#">Something else here</a></li>#}
-                {#                    </ul>#}
-                {#                </li>#}
-                {#                <li class="nav-item">#}
-                {#                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>#}
-                {#                </li>#}
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="{% url 'index' %}">
+                <img src="{% static 'img/t_rune.jpg' %}" height=50 alt="">
+            </a>
+            <a class="navbar-brand" href="{% url 'index' %}"> <b class="ms-3">netkillah</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'all_blogs' %}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'todo_url' %}">To Do list</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% static 'resume.pdf' %}" target="_blank">Resume</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{% url 'authapp:auth_main_url' %}">Auth</a>
+                    </li>
+                    {#                <li class="nav-item dropdown">#}
+                    {#                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"#}
+                    {#                       data-bs-toggle="dropdown" aria-expanded="false">#}
+                    {#                        Dropdown#}
+                    {#                    </a>#}
+                    {#                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+                    {#                        <li><a class="dropdown-item" href="#">Action</a></li>#}
+                    {#                        <li><a class="dropdown-item" href="#">Another action</a></li>#}
+                    {#                        <li>#}
+                    {#                            <hr class="dropdown-divider">#}
+                    {#                        </li>#}
+                    {#                        <li><a class="dropdown-item" href="#">Something else here</a></li>#}
+                    {#                    </ul>#}
+                    {#                </li>#}
+                    {#                <li class="nav-item">#}
+                    {#                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>#}
+                    {#                </li>#}
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+{% endblock %}
 <div class="container">
     {% block content %}
 

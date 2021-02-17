@@ -8,8 +8,8 @@ portfolio/__pycache__
 authapp/__pycache__
 portfolio/migrations
 authapp/migrations
-static/
-media/
+/static/
+/media/
 */__pycache__
 __pycache__
 /personal_portfolio_ondj/local_settings.py

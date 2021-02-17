@@ -5,7 +5,7 @@
     <h1 class="text-center mt-5">this is autharization page</h1>
 
 
-    <form action="{% url 'authapp:auth_main_url' %}" enctype="multipart/form-data">
+    <form action="{% url 'authapp:auth_main_url' %}" enctype="multipart/form-data" method="POST">
         {% csrf_token %}
         {% for field in fields %}
 

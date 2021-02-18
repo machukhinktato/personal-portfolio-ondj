@@ -11,8 +11,8 @@
         {% endif %}
         {% for field in fields %}
             {% if field.errors %}
-                <div class="alert alert-danger">
-                    {{ field.errors }}
+                <div class="container col-6 alert alert-danger">
+                    <p>{{ field.errors }}</p>
                 </div>
             {% endif %}
             <div class="container col-6">
@@ -21,7 +21,7 @@
             </div>
         {% endfor %}
         <br>
-        <div class="container  col-6">
+        <div class="container col-6">
             <input class="form-control btn btn-outline-secondary" type=submit value="войти">
         </div>
     </form>

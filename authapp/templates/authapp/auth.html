@@ -1,41 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
     <h1 class="text-center mt-5">this is autharization page</h1>
 
 
-    <form action="{% url 'authapp:auth_main_url' %}" enctype="multipart/form-data" method="POST">
+    <form action="{% url 'authapp:auth_login_url' %}" enctype="multipart/form-data" method="POST">
         {% csrf_token %}
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}">
+        {% endif %}
         {% for field in fields %}
-
             {% if field.errors %}
                 <div class="alert alert-danger">
                     {{ field.errors }}
                 </div>
             {% endif %}
-
-            <div class="container col-4 mt-5 ">
-                <p>{{ field.label }}</p>
-                <p>{{ field }}</p>
-
+            <div class="container col-6">
+                {{ field.label }}
+                {{ field }}
             </div>
         {% endfor %}
-        <div class="container d-flex flex-column col-4">
-            {#            <a href="#" style="text-decoration: none;" class=" btn btn-outline-success"#}
-{#            <button type="submit" class="btn btn-outline-success">#}
-                <input class="form-control btn btn-outline-success" type="submit" value="Log in">
-{#                Log in#}
-{#            </button>#}
-            {#            </a>#}
-            <br>
-            <a href="{% url 'authapp:reg_url' %}" style="text-decoration: none;" class="btn btn-outline-success">
-                Registration
-            </a>
-            <a href="#" style="text-decoration: none;" class="btn btn-outline-success">
-                Back
-            </a>
+        <br>
+        <div class="container  col-6">
+            <input class="form-control btn btn-outline-secondary" type=submit value="войти">
         </div>
     </form>
-
+    <div class="container mt-2 col-6">
+        <p class="justify-content-center d-flex btn btn-outline-secondary">регистрация</p>
+    </div>
 {% endblock %}

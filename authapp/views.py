@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import HttpResponseRedirect
 from django.contrib import auth
 from django.urls import reverse
+from django.conf import settings
 from .forms import *
 
 

@@ -9,7 +9,7 @@
         {% if next %}
             <input type="hidden" name="next" value="{{ next }}">
         {% endif %}
-        {% for field in fields %}
+        {% for field in auth_form %}
             {% if field.errors %}
                 <div class="container col-6 alert alert-danger">
                     <p>{{ field.errors }}</p>

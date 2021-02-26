@@ -20,9 +20,9 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('portfolio.urls')),
-    path('blog/', include('blog.urls')),
-    path('todo/', include('todo.urls')),
+    path('', include('portfolio.urls', namespace='main')),
+    path('blog/', include('blog.urls', namespace='blogs')),
+    path('todo/', include('todo.urls', namespace='todo')),
     path('auth/', include('authapp.urls')),
 ]
 

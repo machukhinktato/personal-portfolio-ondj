@@ -8,7 +8,7 @@
     <div class="row">
         {% for project in projects %}
             <div class="col-4 col-6 card-body">
-            <a href="{% url 'project_details' pk=project.id %}" style=" text-decoration: none">
+            <a href="{% url 'main:project_details' pk=project.id %}" style=" text-decoration: none">
                 <h3 class="text-success">{{ project.title|title }}</h3>
             </a>
             {% if project.url %}

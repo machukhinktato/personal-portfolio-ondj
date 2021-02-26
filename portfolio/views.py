@@ -5,6 +5,7 @@ from .models import Project
 def about(request):
     return render(request, 'base.html')
 
+
 def index(request):
     projects = Project.objects.all()
     content = {
